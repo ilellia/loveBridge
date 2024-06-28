@@ -23,7 +23,9 @@
 			type="text/css"
 		/>
 	</head>
+
 	<body>
+<!--	헤더-->
 		<div class="header">
 			<div class="header-wrap">
 				<div class="left">
@@ -62,29 +64,26 @@
 
 		<div class="container">
 			<div class="section join">
-				<div class="section-tit">일반 회원가입</div>
-				<label class="input-label required">성함</label>
-				<div class="input-wrap">
-					<input
-						type="text"
-						class="input-text"
-						value="홍길동"
-					/>
-				</div>
-				<label class="input-label required">아이디</label>
+				<div class="section-tit">기본 정보</div>
+				<form method="post" action="/joinProc" name="joinForm">
+
+				<label class="input-label required">이메일</label>
 				<div class="input-wrap">
 					<input
 						type="text"
 						class="input-text"
 						placeholder="‘@’ 포함 모두 입력해 주세요."
+						name = "email"
 					/>
 				</div>
+
 				<label class="input-label required">비밀번호</label>
 				<div class="input-wrap">
 					<input
 						type="password"
 						class="input-text"
 						placeholder="영문+숫자+특수문자 조합으로 입력해 주세요."
+						name = "password"
 					/>
 				</div>
 				<label class="input-label required"
@@ -100,39 +99,42 @@
 				<div class="input-guide error">
 					비밀번호가 일치하지 않습니다.
 				</div>
-				<label class="input-label required">연락처</label>
+
+				<label class="input-label required">애칭</label>
 				<div class="input-wrap">
 					<input
-						type="text"
-						class="input-text"
-						value="010-5555-4444"
+							type="text"
+							class="input-text"
+							placeholder="혁진쨩♥"
+							name = "nickname"
 					/>
 				</div>
-				<div class="input-guide confirm">
-					휴대폰 인증이 완료 되었습니다.
-				</div>
-				<div class="info-confirm">
-					<div class="icon-confirm"></div>
-					<div class="tit">세무 정보 확인</div>
-					<div class="text">
-						세무 정보 확인을 위해 주민등록번호 입력을
-						부탁드려요.<br />
-						주민등록번호는 암호화되어 저장됩니다.
-					</div>
+
+					<label class="input-label required">생년월일</label>
 					<div class="input-wrap">
 						<input
-							type="number"
-							class="input-text line"
-							value="901224"
+								type="text"
+								class="input-text"
+								placeholder="1998"
+								name = "birth-year"
 						/>
-						<span class="unit">-</span>
+
 						<input
-							type="number"
-							class="input-text"
-							placeholder="뒷자리 입력"
+								type="text"
+								class="input-text"
+								placeholder="02"
+								name = "birth-month"
+						/>
+
+						<input
+								type="text"
+								class="input-text"
+								placeholder="14"
+								name = "birth-days"
 						/>
 					</div>
-				</div>
+
+
 				<div class="section-sub">
 					사이트 이용을 위한 <br />
 					약관에 <span class="txt-c--primary">동의</span>해
@@ -335,13 +337,6 @@
 						<label class="input-checkbox">
 							<input type="checkbox" />
 							<span class="check square"></span>
-							<span class="text">SMS수신 동의</span>
-						</label>
-					</div>
-					<div class="line">
-						<label class="input-checkbox">
-							<input type="checkbox" />
-							<span class="check square"></span>
 							<span class="text">이메일 수신 동의</span>
 						</label>
 					</div>
@@ -355,15 +350,20 @@
 						취소
 					</button>
 					<button
-						type="button"
+						type="submit"
 						class="btn btn-half type2 btn-round btn-primary"
 						onclick="location.href='join_complete.html'"
 					>
 						가입하기
 					</button>
 				</div>
+
+				</form>
+
+
 			</div>
 		</div>
+<!--푸터-->
 		<div class="footer">
 			<div class="footer-wrap">
 				<div class="left">
